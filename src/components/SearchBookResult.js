@@ -12,11 +12,11 @@ class SearchBookResult extends Component {
       header: '',
       message: ''
     }
-  }
+  };
 
   getSavedBook = (book) => {
     return ;
-  }
+  };
 
   moveBookHandler = (book, moveTo,) => {
     this.props.moveBookHandler(book, moveTo);
@@ -44,7 +44,7 @@ class SearchBookResult extends Component {
     this.setState((curr_state) => ({
       isPopUpOpen: !curr_state.isPopUpOpen
     }));
-  } 
+  };
 
   render() {
     return (

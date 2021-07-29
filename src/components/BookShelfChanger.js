@@ -8,7 +8,7 @@ class BookShelfChanger extends Component {
     if (selected !== "move") {
       this.props.bookShelfChangerHandler(event.target.value);
     }
-  }
+  };
 
   render() {
     return (

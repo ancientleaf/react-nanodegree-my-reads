@@ -11,7 +11,7 @@ class Book extends Component {
 
     isThumbnailMissing = (book) => {
         return !book.imageLinks || !book.imageLinks.thumbnail
-    }
+    };
 
     render() {
         const { book } = this.props;
@@ -20,14 +20,14 @@ class Book extends Component {
             <li>
                 <div className="book">
                     <div className="book-top">
-                        <div 
-                            className="book-cover" 
+                        <div
+                            className="book-cover"
                             style={
-                                { 
-                                    width: 128, 
-                                    height: 193, 
-                                    backgroundImage: `url(${this.isThumbnailMissing(book) ? imageNotFound: book.imageLinks.thumbnail })`, 
-                                    backgroundSize: this.isThumbnailMissing(book) ? `100% 100%` : 'auto' 
+                                {
+                                    width: 128,
+                                    height: 193,
+                                    backgroundImage: `url(${this.isThumbnailMissing(book) ? imageNotFound : book.imageLinks.thumbnail})`,
+                                    backgroundSize: this.isThumbnailMissing(book) ? `100% 100%` : 'auto'
                                 }
                             }></div>
                         <BookShelfChanger bookShelfChangerHandler={this.moveBookHandler} currentShelve={this.props.currentShelve} />

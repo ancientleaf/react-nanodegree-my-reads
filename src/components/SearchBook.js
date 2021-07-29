@@ -10,7 +10,7 @@ class SearchBook extends Component {
     query: '',
     result: [],
     error: ''
-  }
+  };
 
 
   toggleSearch = () => {

@@ -1,5 +1,4 @@
 import React from 'react';
-// import * as BooksAPI from './BooksAPI'
 import './App.css';
 import ListBookShelf from '../ListBookShelf';
 import SearchBook from '../SearchBook';
@@ -25,7 +24,7 @@ class BooksApp extends React.Component {
     BooksAPI.getAll().then(books => { 
       this.setState({ savedBooks: books })
     });
-  }
+  };
 
   render() {
     return (
@@ -56,4 +55,4 @@ class BooksApp extends React.Component {
   }
 }
 
-export default BooksApp
+export default BooksApp;
