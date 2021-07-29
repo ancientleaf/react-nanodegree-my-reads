@@ -1,4 +1,4 @@
-export const ShelvesConfig = {
+export const SHELVES_CONFIG = {
   shelves: [
     {
       id: 'currentlyReading',

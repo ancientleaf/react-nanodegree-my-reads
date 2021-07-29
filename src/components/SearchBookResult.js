@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Book from './Book';
 import Popup from './popup/Popup';
-import { ShelvesConfig } from '../config/ShelvesConfig';
+import { SHELVES_CONFIG } from '../config/ShelvesConfig';
 
 class SearchBookResult extends Component {
 
@@ -20,7 +20,7 @@ class SearchBookResult extends Component {
 
   moveBookHandler = (book, moveTo,) => {
     this.props.moveBookHandler(book, moveTo);
-    let shelf = ShelvesConfig.shelves.find( shelf => shelf.id === moveTo);
+    let shelf = SHELVES_CONFIG.shelves.find( shelf => shelf.id === moveTo);
     let popUpBoxMsg = shelf ? {
       header: 'Added book to list!',
       message: `Moved '${book.title}' to ${shelf.title} shelf.`
