@@ -20,8 +20,8 @@ class SearchBookResult extends Component {
 
   moveBookHandler = (book, moveTo,) => {
     this.props.moveBookHandler(book, moveTo);
-    let shelf = SHELVES_CONFIG.shelves.find( shelf => shelf.id === moveTo);
-    let popUpBoxMsg = shelf ? {
+    const shelf = SHELVES_CONFIG.shelves.find( shelf => shelf.id === moveTo);
+    const popUpBoxMsg = shelf ? {
       header: 'Added book to list!',
       message: `Moved '${book.title}' to ${shelf.title} shelf.`
     } : {
@@ -36,7 +36,7 @@ class SearchBookResult extends Component {
   };
 
   getUpdatedBookShelfId = (resultBook) => {
-    let savedBook = this.props.savedBooks.find(book => book.id === resultBook.id);
+    const savedBook = this.props.savedBooks.find(book => book.id === resultBook.id);
     return !savedBook ?  'none' : savedBook.shelf; 
   };
 
