@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Book from './Book';
-import Popup from './popup/Popup';
+import PopUp from './PopUp/PopUp';
 import { SHELVES_CONFIG } from '../config/ShelvesConfig';
 
 class SearchBookResult extends Component {
@@ -50,7 +50,7 @@ class SearchBookResult extends Component {
     return (
       <div className="search-books-results">
         {
-          this.state.isPopUpOpen && <Popup
+          this.state.isPopUpOpen && <PopUp
             handleClose={this.togglePopUp}
             header={this.state.popUpBox.header}
             message={this.state.popUpBox.message}

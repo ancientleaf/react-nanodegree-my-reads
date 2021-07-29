@@ -1,6 +1,8 @@
 import React from "react";
-import './Popup.css';
-const Popup = props => {
+import './PopUp.css';
+import PropTypes from 'prop-types';
+
+const PopUp = props => {
   return (
     <div className="popup-box">
       <div className="box">
@@ -11,5 +13,9 @@ const Popup = props => {
     </div>
   );
 };
- 
-export default Popup;
+
+PopUp.propTypes = {
+  handleClose: PropTypes.func.isRequired
+};
+
+export default PopUp;
