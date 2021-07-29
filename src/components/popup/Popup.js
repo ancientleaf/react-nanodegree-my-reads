@@ -11,7 +11,7 @@ const PopUp = props => {
         <p>{props.message}</p>
       </div>
     </div>
-  );
+  )
 };
 
 PopUp.propTypes = {
