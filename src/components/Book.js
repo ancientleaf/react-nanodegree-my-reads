@@ -4,7 +4,7 @@ import BookShelfChanger from './BookShelfChanger';
 import imageNotFound from './../icons/image-not-found.png';
 
 class Book extends Component {
-
+    
     moveBookHandler = (moveTo) => {
         this.props.moveBookHandler(this.props.book, moveTo)
     };
