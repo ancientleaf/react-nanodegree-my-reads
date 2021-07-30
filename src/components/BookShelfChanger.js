@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 
 class BookShelfChanger extends Component {
 
+  /**
+  * @description Handler function to detect onChange event on 
+  *               select element to move book to different shelve
+  * @param {event} event Event of the onChange used to extract 
+  *                 target of newly selected shelf
+  */
   bookShelfChangerHandler = (event) => {
     const selected = event.target.value;
     if (selected !== "move") {

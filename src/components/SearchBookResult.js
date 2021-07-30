@@ -14,11 +14,14 @@ class SearchBookResult extends Component {
     }
   };
 
-  getSavedBook = (book) => {
-    return ;
-  };
-
-  moveBookHandler = (book, moveTo,) => {
+  /**
+  * @description Move book to different shelve. 
+  *               Uses props.moveBookHandler to move book.
+  *               Toggles pop up message when book is moved successfully.
+  * @param {object} moveBook Book to be moved
+  * @param {string} toShelf Shelf Id to move the book to
+  */
+  moveBookHandler = (book, moveTo) => {
     this.props.moveBookHandler(book, moveTo);
     const shelf = SHELVES_CONFIG.shelves.find( shelf => shelf.id === moveTo);
     const popUpBoxMsg = shelf ? {
@@ -35,11 +38,21 @@ class SearchBookResult extends Component {
     }));
   };
 
+  /**
+  * @description Get up to date Shelf Id for a Book Shelf Changer
+  *               If the book is belong to any shelf, return the shelf id to None.
+  *               Else return the shelve id where the book is belong to
+  * @param {object} resultBook Book to be returned up to date shelf id
+  * @retruns {string} Shelf Id of the book to be displayed in Book Shelf Changer
+  */
   getUpdatedBookShelfId = (resultBook) => {
     const savedBook = this.props.savedBooks.find(book => book.id === resultBook.id);
     return !savedBook ?  'none' : savedBook.shelf; 
   };
 
+  /**
+  * @description Toggles Pop Up box to be displayed to user.
+  */
   togglePopUp = () =>{
     this.setState((curr_state) => ({
       isPopUpOpen: !curr_state.isPopUpOpen

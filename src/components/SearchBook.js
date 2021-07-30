@@ -12,18 +12,24 @@ class SearchBook extends Component {
     error: ''
   };
 
-
-  toggleSearch = () => {
-    this.props.toggleSearchPage();
-  };
-
+  /**
+  * @description Empties result and query in State  
+  */
   emptyQuery = () => {
     this.setState({
       result: [],
       query: ''
     });
   }
-
+ 
+  /**
+  * @description Handler function to detect onChange event on search input 
+  *               element to trigger search book request. This will set error 
+  *               message in state when error is received from Books api.
+  *               Sets the result of the searched query whe request return success.
+  * @param {event} event Event of the onChange used to extract 
+  *                 target of newly typed book search query
+  */
   onSearchChangeHandler = (event) => {
     const query = event.target.value;
 

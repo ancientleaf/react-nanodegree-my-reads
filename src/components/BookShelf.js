@@ -4,6 +4,11 @@ import Book from './Book';
 
 class BookShelf extends Component {
 
+  /**
+  * @description Move book to different shelve using props.moveBookHandler
+  * @param {object} moveBook Book to be moved
+  * @param {string} toShelf Shelf Id to move the book to
+  */
   moveBookHandlerToOtherShelf = (book, moveTo) => {
     this.props.moveBookHandler(book, moveTo);
   };

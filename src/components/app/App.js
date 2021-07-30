@@ -11,6 +11,11 @@ class BooksApp extends React.Component {
     savedBooks: []
   };
 
+  /**
+  * @description Move book to different shelve. Function is to be passed to child component to move book
+  * @param {object} moveBook Book to be moved
+  * @param {string} toShelf Shelf Id to move the book to
+  */
   moveBookHandler = (moveBook, toShelf) => {
     BooksAPI.update(moveBook, toShelf).then( res => {
       moveBook.shelf=toShelf;

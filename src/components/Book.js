@@ -5,10 +5,19 @@ import imageNotFound from './../icons/image-not-found.png';
 
 class Book extends Component {
 
+  /**
+  * @description Move current book in props to different shelve 
+  * @param {string} toShelf Shelf Id to move the book to
+  */
   moveBookHandler = (moveTo) => {
     this.props.moveBookHandler(this.props.book, moveTo)
   };
 
+  /**
+  * @description Check if the Thumbnail iss missing from book object 
+  * @param {object} book Book to be checked for Thumnail existence
+  * @returns {boolean} Returns True if Thumbnail is missing, False is Thumbnail exist 
+  */
   isThumbnailMissing = (book) => {
     return !book.imageLinks || !book.imageLinks.thumbnail
   };
