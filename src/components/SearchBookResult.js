@@ -64,7 +64,7 @@ class SearchBookResult extends Component {
       <div className="search-books-results">
         {
           this.state.isPopUpOpen && <PopUp
-            handleClose={this.togglePopUp}
+            closePopUpHandler={this.togglePopUp}
             header={this.state.popUpBox.header}
             message={this.state.popUpBox.message}
           />
