@@ -1,6 +1,6 @@
 # MyReads Project
 
-This is a completed Project for MyReads Project. 
+This is a completed Project for MyReads Project for Udacity Nano Degree. 
 
 ## Launch the application
 
@@ -16,6 +16,9 @@ This application allows user to
 - Add more books to shelf on the Search page on /Search path
 - Each of the books displayed will have a drop down option to move to different shelf
 - The 'None' option in the dropdown will remove book from shelf
+
+#### Additional feature
+A pop up message will be displayed to user when a searched book is added to a shelf.
 
 ## Configuration of application
 Shelves is configured via src/config/ShelvesConfig.js.
